@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            height: 80vh;
+            width: 80vw;
+            position: relative;
+        }
+
+        .img{
+
+            object-fit: fill;
+             
+        }
+
+        .ball{
+            height: 100px;
+            width: 100px;
+            background-image: url("data:image/jpeg;base64,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");
+            border: 2px solid black;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: animateX 4s linear alternate infinite, animateY 1s alternate ease-out infinite;
+
+        }
+
+        @keyframes animateX {
+            from{
+                left: 0;
+            }
+            to{
+                left: 93%;
+            }
+            
+        }
+
+        @keyframes animateY {
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 87%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://market-resized.envatousercontent.com/previews/files/266400586/Pixel+art+background+with+blue+sky+and+green+grass+_pv.jpg?w=590&h=590&cf_fit=crop&crop=top&format=auto&q=85&s=04c223c034913e30342dcb15d1029bb830792b559b6814bc8f7a4d8d58a5737e" alt="" height="765px" width="1537px">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
